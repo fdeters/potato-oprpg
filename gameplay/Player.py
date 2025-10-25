@@ -5,7 +5,7 @@ class Player:
         self._destiny = 0
         self._potatoes = 0
         self._orcs = 0
-    
+
     def __str__(self) -> str:
         return f"{self._name}'s stats: {self._destiny} Destiny | {self._potatoes} Potatoes | {self._orcs} Orcs"
 
@@ -22,7 +22,7 @@ class Player:
     @property
     def destiny(self):
         return self._destiny
-    
+
     @destiny.setter
     def destiny(self, value):
         if value < 0:
@@ -32,17 +32,17 @@ class Player:
     @property
     def potatoes(self):
         return self._potatoes
-    
+
     @potatoes.setter
     def potatoes(self, value):
         if value < 0:
             raise ValueError("Potatoes cannot be lower than zero")
         self._potatoes = value
-    
+
     @property
     def orcs(self):
         return self._orcs
-    
+
     @orcs.setter
     def orcs(self, value):
         if value < 0:

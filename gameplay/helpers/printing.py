@@ -14,4 +14,4 @@ def slow_print(text: str, typing_speed: int = 50):
         sleep_time = (random.random() * 10.0) / typing_speed
         time.sleep(sleep_time)
 
-    print('')
+    print("")
