@@ -6,7 +6,7 @@ from gameplay.Player import Player
 
 def main():
     player = Player("Forrest")
-    game = Game(player, typing_speed=100)
+    game = Game(player, typing_speed=150)
 
     game.run()
 
