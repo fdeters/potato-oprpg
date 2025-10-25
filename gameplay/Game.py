@@ -87,6 +87,8 @@ class Game:
         for outcome in event_outcomes:
             magnitude = outcome['magnitude']
             stat = outcome['stat']
+            
+            message = ''
             try: 
                 match stat:
                     case "destiny":
@@ -135,6 +137,3 @@ class Game:
     def game_over(self):
         return self._game_over
     
-    @property
-    def game_over_type(self):
-        return self._game_over_type
