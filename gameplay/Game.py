@@ -24,8 +24,7 @@ class Game:
             command = self.get_command()
             match command.lower():
                 case 'h':
-                    self._player.hurl(self.danger_level)
-                    self.slow_print("You hurl potatoes into your garden. Scram, orcs!")
+                    self.handle_hurl()
                 case 'e':
                     self.new_event()
                 case _:
@@ -48,6 +47,14 @@ class Game:
         except IndexError:
             pass
         return command
+    
+
+    def handle_hurl(self):
+        try:
+            self._player.hurl(self.danger_level)
+            self.slow_print("You hurl potatoes into your garden. Scram, orcs!")
+        except ValueError as error:
+            self.slow_print(str(error))
 
 
     def new_event(self):
